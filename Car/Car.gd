@@ -3,7 +3,7 @@ extends Area2D
 const CAR_LIST = ["Grey1", "Grey2", "Yellow1", "Yellow2"]  # TODO: typing
 # TODO: doc constants and vars
 
-var CAR_SPEED: int = 250  # TODO: these are not constants!!!!
+var CAR_SPEED: int = 200  # TODO: these are not constants!!!!
 var DIRECTION: int = 1
 
 

@@ -1,7 +1,7 @@
 """Player script."""
 extends KinematicBody2D
 
-const speed: int = 200
+const SPEED: int = 200
 
 
 func _process(_delta: float) -> void:
@@ -22,7 +22,7 @@ func _process(_delta: float) -> void:
 		velocity.y += 1
 
 	# move_and_slide() applies delta automatically
-	var _velocity: Vector2 = move_and_slide(velocity.normalized() * speed)
+	var _velocity: Vector2 = move_and_slide(velocity.normalized() * SPEED)
 
 	player_animation(velocity)
 

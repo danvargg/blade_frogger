@@ -10,8 +10,12 @@ func _ready():
 func car_spawn(start_pos: int):
 	var car: Node = CAR.instance()
 	var car_start_node_name = "StartPositions/CarStart" + str(start_pos)
+
 	car.position = get_node(car_start_node_name).position
-	add_child(car)
+	$"YSort".add_child(car)
+
+	var time_node_name = "CarTimers/Timer" + str(start_pos)
+	get_node(time_node_name).wait_time = rand_range(1.6, 2.2)
 
 
 func _on_Timer1_timeout():

@@ -3,8 +3,8 @@ extends Area2D
 const CAR_LIST = ["Grey1", "Grey2", "Yellow1", "Yellow2"]  # TODO: typing
 # TODO: doc constants and vars
 
-var CAR_SPEED: int = 200  # TODO: these are not constants!!!!
-var DIRECTION: int = 1
+var car_speed: float = 200  # TODO: these are not constants!
+var direction: int = 1
 
 
 func _ready() -> void:
@@ -13,11 +13,13 @@ func _ready() -> void:
 
 	$"AnimatedSprite".animation = current_car
 
+	car_speed = rand_range(200, 250)
+
 	if position.x < 0:
-		DIRECTION = -1
+		direction = -1
 		$"AnimatedSprite".flip_h = true
 	else:
-		DIRECTION = 1
+		direction = 1
 
 
 func _process(delta) -> void:
@@ -27,7 +29,7 @@ func _process(delta) -> void:
 	:param delta: Delta time
 	"""
 
-	position.x -= CAR_SPEED * delta * DIRECTION
+	position.x -= car_speed * delta * direction
 
 
 func _on_Car_body_entered(_body) -> void:

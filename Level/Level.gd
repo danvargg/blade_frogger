@@ -4,7 +4,7 @@ const CAR = preload("res://Car/Car.tscn")
 
 
 func _ready():
-	$Player.position = $PlayerSytartPos.position
+	$YSort/Player.position = $PlayerSytartPos.position
 
 
 func car_spawn(start_pos: int):

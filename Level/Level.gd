@@ -18,6 +18,13 @@ func car_spawn(start_pos: int):
 	get_node(time_node_name).wait_time = rand_range(1.6, 2.2)
 
 
+func _process(_delta):
+	if $"YSort/Player".position.y <= 80:  # FIXME: this does too early, also magic number
+		$"YSort/Player".position = $"PlayerSytartPos".position
+		Global.score += 1
+	$"CanvasLayer/TestScore".text = "Score: " + str(Global.score)
+
+
 func _on_Timer1_timeout():
 	car_spawn(1)
 

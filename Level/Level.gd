@@ -22,6 +22,7 @@ func _process(_delta):
 	if $"YSort/Player".position.y <= 80:  # FIXME: this does too early, also magic number
 		$"YSort/Player".position = $"PlayerSytartPos".position
 		Global.score += 1
+		$"Win".play()
 	$"CanvasLayer/TestScore".text = "Score: " + str(Global.score)
 
 

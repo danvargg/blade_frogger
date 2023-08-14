@@ -13,4 +13,4 @@ A blade style frogger game built in `Godot`.
 
 <img src="https://github.com/danvargg/blade_frogger/blob/master/images/image00.png">
 
-<img src="https://github.com/danvargg/blade_frogger/blob/master/images/image10.png">
+<img src="https://github.com/danvargg/blade_frogger/blob/master/images/image01.png">

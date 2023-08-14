@@ -2,6 +2,14 @@
 
 A blade style frogger game built in `Godot`.
 
+## How to build
+
+- Install `Godot` from [here](https://godotengine.org/download)
+- Clone this repository
+- Open `Godot` and import the project
+- Click on `Play` button
+- Enjoy!
+
 ### How to play
 
 - Use the arrow keys to move the character
